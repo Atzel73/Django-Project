@@ -1,0 +1,27 @@
+{% extends 'contact.html' %}
+
+{% block content %}
+
+<div class="gallery">
+    <div class="direction-container">
+        <div class="card-size">
+            <div class="contenedor">
+                <form action="/contact/" method="post">
+                    {% csrf_token %}
+
+                    <label for="texto" class="tagg">Ingrese el nombre o numero de pokemon:</label>
+                    <input type="text" id="texto" name="texto" value="{{ texto|default:'' }}" class="text"
+                        placeholder=" ">
+                    <button type="submit" class="boton">Enviar</button>
+                </form>
+
+                <h5 class="card-title">Resultado:</h5>
+                <img src="{{ image_case }}" alt="{{ active_case }}" title="{{ active_case }}">
+                <p class="card-text">El pokemon es: {{ active_case }}</p>
+                <p class="card-text">Y su ID es: {{ second_case }}</p>
+                <p class="card-text">Aquí está la URL corregida: {{ corrected_url }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import views
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     
     path('', views.inicio, name = 'inicio'),
-    path('contact/', views.contacto, name = 'contact'),
-]
+    path('contact/', views.getURL, name = 'contact' ),
+    #path('get_pokemon/', views.getURL, name='get_pokemon'),
+     
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

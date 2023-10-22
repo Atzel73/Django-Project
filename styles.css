@@ -1,0 +1,60 @@
+.container {
+    width: 300px;
+    height: 300px;
+    border-radius: 25px;
+    justify-self: center;
+    align-self: center;
+    float: left;
+}
+
+.image {
+    padding: 5px 10px 5px 10px;
+    margin: 2px;
+    display: inline-block;
+    width: 250px;
+    height: 300px;
+    text-align: center; 
+}
+
+.image:hover {
+    background-color: blue;
+}
+.direction-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    font-style: italic;
+    font-size: 17px;
+  }
+  .contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  .card-size {
+    margin: 30px;
+  }
+  .foto2 {
+    margin-bottom: -8px;
+    align-self: center;
+  }
+  .foto2:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .gallery{
+    margin: 10px 50px;
+}
+.gallery img{
+    width: 230px;
+    padding: 5px;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.gallery img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
